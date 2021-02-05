@@ -1,0 +1,20 @@
+<%- include ('partials/head.ejs') %>
+
+<body>
+	<div class="container">
+		<div class="text-left">
+			<a href="/create">Add</a>
+			<ul>
+				<% posts.forEach(function(post){ %>
+				<li>
+					<b><%= post.title %></b>
+					<br>
+					<%= post.body %>
+				</li>
+				<br>
+				<% }); %>
+			</ul>
+		</div>
+	</div>
+</body>
+<%- include ('partials/footer.ejs') %>
